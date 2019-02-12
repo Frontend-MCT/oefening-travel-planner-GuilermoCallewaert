@@ -1,0 +1,126 @@
+/*------------------------------------*\
+#FONTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root {
+    /* colors */
+    --color-alpha: #de4831;
+    --color-beta: #e1decb ;
+    --color-dark: #221e21 ;
+
+    /* gutters */
+    --gutter: 24px;
+    --gutter-xl: calc( var(--gutter) * 2 );
+
+}
+/*------------------------------------*\
+#ELEMENTS
+\*------------------------------------*/
+html {
+    /* positioning */
+    /* box-model */
+    box-sizing: border-box;
+    /* fonts */
+    line-height: 1.6;
+    color: var(--color-dark);
+    font-size: 17px;
+    font-family: "Sarabun", sans-serif;
+    /* apperance */
+    /* other styles */
+    /* zorgt voor een slashed zero */
+    /* Gebruik van variabelen */
+}
+/*------------------------------------*\
+#OBJECTS
+\*------------------------------------*/
+.o-grid {
+  display: grid;
+  grid-gap: var(--gutter);
+}
+/*------------------------------------*\
+#COMPONENTS
+\*------------------------------------*/
+/* sidebar; */
+.c-sidebar {
+  height: 100vh;
+  background: var(--color-beta);
+  padding: var(--gutter);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+.c-sidebar-menu {
+
+}
+.c-sidebar-header {
+  display: flex;
+  align-items: center;
+}
+.c-sidebar-header__image {
+  max-height: var(--gutter);
+}
+.c-sidebar-header__title {
+  font-size: 1rem; /*relative to the body's font-size*/
+  margin-left: calc(var(--gutter)/2);
+}
+.c-sidebar-counter {
+  font-size: .95rem;
+  font-weight: 500;
+  font-style: normal;
+}
+/* menu */
+.c-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 calc(var(--gutter)*3);
+}
+.c-menu__item  {}
+
+.c-menu__link {
+  all: unset; /*Gaat alle */
+
+  color: var(--color-alpha);
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 500;
+
+  will-change: opacity;
+  transition: opacity 200ms ease-out;
+  opacity: .7;
+
+  cursor: pointer;
+}
+
+.c-menu__link:hover {
+  opacity: 1;
+}
+
+.c-menu__title {
+  font-size: .8rem;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-bottom: 0;
+}
+/* content */
+.c-content {
+  height: 100vh;
+  overflow-x: auto;
+}
+/*------------------------------------*\
+#UTILITIES
+\*------------------------------------*/
+.u-grid-main-layout {
+  /* hierdoor kan je o-grid hergebruiken */
+  grid-template-columns: 250px 1fr;
+  height: 100vh;
+}
+
+.u-color-alpha {
+  color: var(--color-alpha)
+}
